@@ -42,4 +42,3 @@ code = 'if x == 10 then y = "hello" else y = 20 = for i = 1 to 10 do sum = sum +
 tokens = tokenize(code)
 for token in tokens:
     print(token)
-

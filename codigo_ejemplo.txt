@@ -1,0 +1,10 @@
+if x == 10 then
+    y = "hello"
+else
+    y = 20
+
+for i = 1 to 10 do
+    sum = sum + i
+
+z = x * y - 5 / 2
+w = a != b
