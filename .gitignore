@@ -1,0 +1,28 @@
+# Ignorar archivos de entorno virtual
+.venv/
+env/
+venv/
+
+# Ignorar archivos de compilación de Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Ignorar archivos temporales de editor
+.idea/
+.vscode/
+
+# Ignorar archivos de dependencias de Python
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Ignorar archivos de configuración de PyCharm
+.idea/
+
+# Ignorar archivos de salida de logs
+*.log
+
+# Ignorar el archivo de configuración de Jupyter Notebook
+.ipynb_checkpoints/
