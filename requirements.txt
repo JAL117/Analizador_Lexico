@@ -1,0 +1,6 @@
+empty
+regex  # Para expresiones regulares (si no quieres usar el módulo nativo `re`)
+numpy  # Si piensas manejar estructuras de datos eficientes
+json5  # Para leer/escribir archivos JSON de manera más flexible
+unittest2  # Para pruebas unitarias (aunque `unittest` viene en la stdlib)
+ply  # Si en algún momento decides usar PLY para análisis léxico/sintáctico
