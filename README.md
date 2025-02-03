@@ -16,7 +16,7 @@ Es un **analizador léxico** desarrollado en **Python**, diseñado para escanear
 
 ## **Estructura del Proyecto**
 ```plaintext
-/LexiPy/
+/Analizador_Lexico/
 │
 ├── src/                # Código fuente
 │   ├── lexer.py        # Implementación del lexer
@@ -42,8 +42,8 @@ Es un **analizador léxico** desarrollado en **Python**, diseñado para escanear
 
 ### 1️⃣ **Clona el repositorio**  
 ```bash
-git clone https://github.com/JesusHernandez223258/LexiPy.git
-cd LexiPy
+git clone https://github.com/JAL117/Analizador_Lexico.git
+cd Analizador_Lexico
 ```
 
 ### 2️⃣ **Instala dependencias**  
