@@ -6,7 +6,7 @@ from src.file_handler import read_file
 from src.lexer import lex
 
 
-# Definir la ruta absoluta para 'output'
+
 output_dir = os.path.join(os.getcwd(), "output")
 
 def load_code():
