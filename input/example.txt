@@ -13,5 +13,19 @@ else
 for i = 1 to 10 do
     sum = sum + i
 
+/*
+ Esto es un comentario
+ multilínea.
+*/
+
 z = x * y - 5 / 2
 w = a != b
+
+
+int x = 10;  
+
+// Esto es un comentario de una línea
+
+if (x > 5) {
+    return x;
+}

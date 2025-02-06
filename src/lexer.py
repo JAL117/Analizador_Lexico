@@ -9,6 +9,8 @@ from file_handler import read_file, write_file
 
 
 TOKEN_SPECS = [
+    (TokenTypes.COMENTARIO, r"/\*.*?\*/"),  # Comentarios multilínea (primero para evitar conflictos)
+    (TokenTypes.COMENTARIO, r"//.*"),  # Comentarios de una línea
     (TokenTypes.PALABRA_CLAVE, r"\b(if|else|then|for|case|break|while|return)\b"),  # Palabras clave
     (TokenTypes.IDENTIFICADOR, r"[a-zA-Z_][a-zA-Z0-9_]*"),  # Identificadores
     (TokenTypes.NUMERO_REAL, r"\b\d+\.\d+\b"),  # Números reales
@@ -20,7 +22,6 @@ TOKEN_SPECS = [
     (TokenTypes.DELIMITADOR, r"[;(){}]"),  # Delimitadores
     (TokenTypes.ASIGNACION, r"="),  # Asignación
     (TokenTypes.ESPACIO, r"\s+"),  # Espacios y saltos de línea (ignorar)
-    (TokenTypes.COMENTARIO, r"//.*?$|/\*.*?\*/", re.DOTALL),  # Comentarios
 ]
 
 
@@ -35,11 +36,11 @@ def lex(code):
 
         # Buscar coincidencias con los patrones de tokens
         for token_type, pattern in TOKEN_SPECS:
-            regex = re.compile(pattern)
+            regex = re.compile(pattern, re.DOTALL) if token_type == TokenTypes.COMENTARIO and r"/\*.*?\*/" in pattern else re.compile(pattern)
             match = regex.match(code, position)
             if match:
                 value = match.group(0)
-                if token_type != TokenTypes.ESPACIO and token_type != TokenTypes.COMENTARIO:
+                if token_type != TokenTypes.ESPACIO: 
                     tokens.append({
                         "type": token_type,
                         "value": value,
@@ -58,7 +59,7 @@ def lex(code):
 
     return tokens
 
-# Punto de entrada del programa
+
 if __name__ == "__main__":
 
     input_file_path = "../input/example.txt"
