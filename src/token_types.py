@@ -1,4 +1,4 @@
-# token_types.py
+
 
 class TokenTypes:
     PALABRA_CLAVE = "PALABRA_CLAVE"  # if, else, then, etc.

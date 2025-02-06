@@ -60,7 +60,7 @@ def lex(code):
 
 # Punto de entrada del programa
 if __name__ == "__main__":
-    # Rutas de archivos
+
     input_file_path = "../input/example.txt"
     output_file_path = "../output/tokens.json"
 
